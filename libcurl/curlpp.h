@@ -9,7 +9,7 @@ Date: 2015/7/17
 #define CURLPP_H
 
 #include <functional>
-#include <curl.h>
+#include <libcurl/curl.h>
 #include <QObject>
 
 #pragma execution_character_set("utf-8")
