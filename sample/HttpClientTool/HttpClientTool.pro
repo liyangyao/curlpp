@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = HttpClientTool
 TEMPLATE = app
-DESTDIR = $$PWD/bin
+DESTDIR = $$PWD/../bin
 
 SOURCES += main.cpp\
         manform.cpp

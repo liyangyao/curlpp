@@ -86,6 +86,12 @@ public:
         return m_lastError==CURLE_OK;
     }
 
+    void setopt_https()
+    {
+        curl_easy_setopt(m_handle, CURLOPT_SSL_VERIFYPEER, 0L);
+        curl_easy_setopt(m_handle, CURLOPT_SSL_VERIFYHOST, 0L);
+    }
+
     bool setopt_httpget()
     {
         m_lastError = curl_easy_setopt(m_handle, CURLOPT_HTTPGET, 1);
