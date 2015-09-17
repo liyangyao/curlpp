@@ -148,6 +148,12 @@ public:
         return m_lastError==CURLE_OK;
     }
 
+    void setopt_nosignal()
+    {
+        m_lastError = curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1L);
+        return m_lastError==CURLE_OK;
+    }
+
     //Http返回数据的写函数
     bool setopt_writefunction(const WriteFunctionCallback &writeFunction)
     {
