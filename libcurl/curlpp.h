@@ -148,9 +148,9 @@ public:
         return m_lastError==CURLE_OK;
     }
 
-    void setopt_nosignal()
+    bool setopt_nosignal()
     {
-        m_lastError = curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1L);
+        m_lastError = curl_easy_setopt(m_handle, CURLOPT_NOSIGNAL, 1L);
         return m_lastError==CURLE_OK;
     }
 
